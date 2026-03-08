@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshCart - Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(to bottom, #ffffff, #ffe4e1);
-            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #fff5f5, #fa8072);
+            font-family: 'Montserrat', sans-serif;
         }
         .navbar {
-            background-color: #fa8072 !important;
+            background: linear-gradient(45deg, #ffb3ba, #fa8072, #ff69b4) !important;
         }
         .navbar-brand {
             color: white !important;
@@ -33,17 +34,40 @@
             text-align: center;
             background: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
-        .suggestions {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
         }
+        .suggestion-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }        
         footer {
-            background-color: #fa8072;
+            background: linear-gradient(135deg, #ff69b4, #fa8072, #ffb3ba);
             color: white;
             padding: 20px 0;
             text-align: center;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+        @media (max-width: 576px) {
+            .product-card i {
+                font-size: 2rem;
+            }
+            .suggestion-card i {
+                font-size: 1.5rem;
+            }
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -61,55 +85,71 @@
         <section class="products mb-5">
             <h2 class="text-center mb-4">Nuestros Productos</h2>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 1</h5>
-                        <p>Descripción breve del producto 1.</p>
-                        <p>$10.00</p>
+                        <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Manzana">
+                        <h5>Manzana Fresca</h5>
+                        <p>Manzanas rojas jugosas y crujientes, perfectas para snacks saludables.</p>
+                        <p>Bs. 10.00</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 2</h5>
-                        <p>Descripción breve del producto 2.</p>
-                        <p>$15.00</p>
+                        <img src="https://images.pexels.com/photos/61127/pexels-photo-61127.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Plátano">
+                        <h5>Plátano Maduro</h5>
+                        <p>Plátanos maduros ideales para smoothies o como snack energético.</p>
+                        <p>Bs. 15.00</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 3</h5>
-                        <p>Descripción breve del producto 3.</p>
-                        <p>$20.00</p>
+                        <img src="https://images.pexels.com/photos/2325843/pexels-photo-2325843.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Lechuga">
+                        <h5>Lechuga Verde</h5>
+                        <p>Lechuga fresca y crujiente, perfecta para ensaladas nutritivas.</p>
+                        <p>Bs. 20.00</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 4</h5>
-                        <p>Descripción breve del producto 4.</p>
-                        <p>$25.00</p>
+                        <img src="https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Tomate">
+                        <h5>Tomate Rojo</h5>
+                        <p>Tomates maduros y sabrosos, ideales para salsas y ensaladas.</p>
+                        <p>Bs. 25.00</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="suggestions">
-            <h3 class="text-center mb-4">Sugerencias para Mejorar Tu Página</h3>
+            <h3 class="text-center mb-4">Servicios que Ofrecemos</h3>
             <div class="row">
-                <div class="col-md-3">
-                    <h5>1. Optimización Móvil</h5>
-                    <p>Asegúrate de que la página sea completamente responsiva en dispositivos móviles.</p>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="suggestion-card">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Productos Frescos">
+                        <h5>Elige Productos Frescos</h5>
+                        <p>Aprende a seleccionar frutas y verduras en su punto óptimo de madurez para máxima frescura.</p>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>2. SEO Básico</h5>
-                    <p>Implementa meta tags y descripciones para mejorar el posicionamiento en buscadores.</p>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="suggestion-card">
+                        <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Recetas Saludables">
+                        <h5>Recetas Saludables</h5>
+                        <p>Descubre recetas deliciosas y nutritivas utilizando nuestros productos frescos.</p>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>3. Integración de Redes Sociales</h5>
-                    <p>Agrega botones para compartir en redes sociales para aumentar la visibilidad.</p>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="suggestion-card">
+                        <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Entrega Rápida">
+                        <h5>Entrega a Domicilio</h5>
+                        <p>Disfruta de entregas rápidas y seguras directamente en tu puerta.</p>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>4. Formulario de Contacto</h5>
-                    <p>Incluye un formulario simple para que los usuarios puedan contactarte fácilmente.</p>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="suggestion-card">
+                        <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Sostenibilidad">
+                        <h5>Sostenibilidad</h5>
+                        <p>Comprometidos con prácticas ecológicas y productos orgánicos para un futuro mejor.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -118,7 +158,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 FreshCart. Todos los derechos reservados.</p>
-            <p>Contacto: info@freshcart.com | Teléfono: (123) 456-7890</p>
+            <p>Contacto: info@freshcart.com | Teléfono: (123) 456-7890, Whatsapp: +591 7891660 </p>
             <p>Política de Privacidad | Términos de Servicio</p>
         </div>
     </footer>
