@@ -3,123 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshCart - Inicio</title>
+    <title>FreshCart - ¡Frescura Total!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         body {
-            background: linear-gradient(to bottom, #ffffff, #ffe4e1);
-            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #fff5f5, #fa8072);
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
         }
+
+        /* Navbar con estilo sólido */
         .navbar {
-            background-color: #fa8072 !important;
+            background: linear-gradient(45deg, #ffb3ba, #fa8072, #ff69b4) !important;
+            border-bottom: 4px solid rgba(0,0,0,0.1);
         }
+
         .navbar-brand {
+            font-weight: 900;
+            font-size: 1.8rem;
+            letter-spacing: -1px;
             color: white !important;
-            font-weight: bold;
         }
-        .btn-download {
-            background-color: white;
-            color: #fa8072;
-            border: 1px solid #fa8072;
-        }
-        .btn-download:hover {
-            background-color: #fa8072;
+
+        /* Título Principal Impactante */
+        .hero-title {
+            font-size: 5.5rem;
+            font-weight: 900;
             color: white;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            line-height: 0.85;
+            text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
         }
+
+        .hero-tagline {
+            font-weight: 700;
+            color: #fff;
+            background: #fa8072;
+            display: inline-block;
+            padding: 5px 15px;
+            transform: rotate(-2deg);
+            margin-bottom: 50px;
+        }
+
+        /* Tarjetas de Productos */
         .product-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            padding: 15px;
             text-align: center;
             background: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.05); /* Sombra sólida */
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border: 2px solid transparent;
         }
-        .suggestions {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: #fa8072;
+            box-shadow: 12px 12px 0px rgba(250, 128, 114, 0.2);
         }
-        footer {
-            background-color: #fa8072;
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h5 {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .price-tag {
+            font-weight: 900;
+            color: #fa8072;
+            font-size: 1.4rem;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .btn-buy {
+            background: #333;
             color: white;
-            padding: 20px 0;
-            text-align: center;
+            font-weight: 700;
+            border-radius: 10px;
+            text-transform: uppercase;
+            width: 100%;
+            border: none;
+            padding: 10px;
+        }
+
+        .btn-buy:hover {
+            background: #fa8072;
+            color: white;
+        }
+
+        /* Sección de Servicios */
+        .suggestion-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 20px;
+            transition: 0.3s;
+            height: 100%;
+            border-left: 5px solid #ff69b4;
+        }
+
+        .suggestion-card h5 { font-weight: 800; }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">FreshCart</a>
-            <div class="d-flex">
-                <a href="appFresh.html" class="btn btn-download">Descargar App</a>
-            </div>
+            <a class="navbar-brand" href="#">FRESHCART</a>
+            <a href="appFresh.html" class="btn btn-light fw-bold px-4 rounded-pill shadow-sm">
+                <i class="bi bi-phone"></i> DESCARGAR APP
+            </a>
         </div>
     </nav>
 
-    <main class="container my-5">
+    <header class="container text-center py-5">
+        <h1 class="hero-title">LO MEJOR<br>DEL CAMPO</h1>
+        <span class="hero-tagline text-uppercase">Directo a tu mesa</span>
+    </header>
+
+    <main class="container">
         <section class="products mb-5">
-            <h2 class="text-center mb-4">Nuestros Productos</h2>
+            <h2 class="fw-900 mb-4 text-center" style="font-weight: 900;">NUESTROS PRODUCTOS</h2>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 1</h5>
-                        <p>Descripción breve del producto 1.</p>
-                        <p>$10.00</p>
+                        <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Manzana">
+                        <h5>Manzana Roja</h5>
+                        <span class="price-tag">Bs. 10.00</span>
+                        <button class="btn btn-buy">Agregar</button>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 2</h5>
-                        <p>Descripción breve del producto 2.</p>
-                        <p>$15.00</p>
+                        <img src="https://images.pexels.com/photos/61127/pexels-photo-61127.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Plátano">
+                        <h5>Plátano Maduro</h5>
+                        <span class="price-tag">Bs. 15.00</span>
+                        <button class="btn btn-buy">Agregar</button>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 3</h5>
-                        <p>Descripción breve del producto 3.</p>
-                        <p>$20.00</p>
+                        <img src="https://images.pexels.com/photos/2325843/pexels-photo-2325843.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lechuga">
+                        <h5>Lechuga Verde</h5>
+                        <span class="price-tag">Bs. 20.00</span>
+                        <button class="btn btn-buy">Agregar</button>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="product-card">
-                        <h5>Producto 4</h5>
-                        <p>Descripción breve del producto 4.</p>
-                        <p>$25.00</p>
+                        <img src="https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tomate">
+                        <h5>Tomate Rojo</h5>
+                        <span class="price-tag">Bs. 25.00</span>
+                        <button class="btn btn-buy">Agregar</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="suggestions">
-            <h3 class="text-center mb-4">Sugerencias para Mejorar Tu Página</h3>
-            <div class="row">
-                <div class="col-md-3">
-                    <h5>1. Optimización Móvil</h5>
-                    <p>Asegúrate de que la página sea completamente responsiva en dispositivos móviles.</p>
+        <section class="services py-5">
+            <h3 class="text-center fw-900 mb-5" style="font-weight: 900;">SERVICIOS EXCLUSIVOS</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="suggestion-card shadow-sm">
+                        <i class="bi bi-star-fill text-warning fs-3"></i>
+                        <h5 class="mt-3">Calidad Premium</h5>
+                        <p class="small">Solo seleccionamos lo mejor de la cosecha diaria.</p>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>2. SEO Básico</h5>
-                    <p>Implementa meta tags y descripciones para mejorar el posicionamiento en buscadores.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="suggestion-card shadow-sm">
+                        <i class="bi bi-truck text-primary fs-3"></i>
+                        <h5 class="mt-3">Entrega Express</h5>
+                        <p class="small">Recibe tu pedido en menos de 60 minutos.</p>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>3. Integración de Redes Sociales</h5>
-                    <p>Agrega botones para compartir en redes sociales para aumentar la visibilidad.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="suggestion-card shadow-sm">
+                        <i class="bi bi-heart-fill text-danger fs-3"></i>
+                        <h5 class="mt-3">100% Orgánico</h5>
+                        <p class="small">Productos sin químicos, cuidando tu salud.</p>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>4. Formulario de Contacto</h5>
-                    <p>Incluye un formulario simple para que los usuarios puedan contactarte fácilmente.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="suggestion-card shadow-sm">
+                        <i class="bi bi-cash-stack text-success fs-3"></i>
+                        <h5 class="mt-3">Ahorro Real</h5>
+                        <p class="small">Precios de mercado sin salir de tu casa.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 FreshCart. Todos los derechos reservados.</p>
-            <p>Contacto: info@freshcart.com | Teléfono: (123) 456-7890</p>
-            <p>Política de Privacidad | Términos de Servicio</p>
+        <div class="container text-center">
+            <p class="fw-bold mb-1">&copy; 2026 FRESHCART</p>
+            <p class="small mb-4 text-secondary">Haciendo tu vida más saludable todos los días.</p>
+            <div class="d-flex justify-content-center gap-3 fs-4">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-whatsapp"></i>
+            </div>
         </div>
     </footer>
 
